@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --primary: #1e3a5f;
+  --accent: #3b7dd8;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e8effa, #f7f9fc);
+  color: var(--primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+main {
+  width: 90%;
+  max-width: 950px;
+  margin: 3rem 0;
+}
+
+.folders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.folder {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow);
+  text-decoration: none;
+  color: var(--primary);
+  padding: 1.5rem 1.2rem;
+  border: 1px solid #e5e9f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.folder:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  background: #fdfdfd;
+}
+
+.folder-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.folder p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+  color: var(--primary);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .folder-title {
+    font-size: 1rem;
+  }
+
+  .folder p {
+    font-size: 0.85rem;
+  }
+}
